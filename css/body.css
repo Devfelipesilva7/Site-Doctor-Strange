@@ -1,0 +1,33 @@
+html, body{
+    position: relative;
+    overflow: hidden; /* tudo que tiver fora area não irá aparecer */
+}
+body{
+    height: 100vh; /* unidade que é visivel em toda altura */ 
+    background: linear-gradient(90deg, #000, #000d 35%,#0000), url(../img/background.png) ; /* inserir a foto da pasta img com degradê*/
+    background-repeat: no-repeat; /* não repetir a imagem */
+    background-size: cover; /*esticar o maximo que pode na tela */
+    background-position: right; /* ajustar para responsividade */
+    display: flex; /* propriedade pai para organizar os itens da página */
+    flex-direction: column;
+    padding: 80px 128px 50px 128px; /* margens do conteudo */
+    animation: zoom 1.5s;
+}
+
+@media (max-width:768px) { /*responsividade */
+    body{
+        padding: 30px 30px 25px 30px;
+        background-image: url(../img/background.png);
+        background-color: #0006;
+        background-blend-mode: darken;
+    }
+}
+
+@keyframes zoom{ /* animação de abertura do site */
+    0%{
+        transform: scale(3);
+    }
+    100%{
+        transform: scale(1);
+    }
+}

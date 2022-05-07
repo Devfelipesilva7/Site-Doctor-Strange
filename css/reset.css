@@ -1,0 +1,15 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family:'Mulish', sans-serif;
+}
+
+a{
+    color: white; /*cor da letra do link branco */
+    text-decoration: none; /* retirar o sublinhado dos links */
+}
+
+ul{
+    list-style: none; /* retirar as bolinhas das listas dos links */
+}

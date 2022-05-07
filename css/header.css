@@ -1,0 +1,44 @@
+header{
+    display: flex;
+    justify-content: space-between;
+}
+
+.link-container{
+    display: flex;
+    gap: 32px;
+}
+
+.link-container a{
+    text-shadow: 2px 2px 2px #000; /*sombra na fonte do texto do link */
+    padding: 6px; /* espaçamento da marcação da nav bar */
+    transition: all .6s; /* efeito de transição da marcação da nav bar */
+}
+
+.link-container a:hover{ /* colocar a marcação quando passar o mouse nos links da nav bar */
+    background-color: #E62721;
+}
+
+@media (max-width: 768px){
+    .link-container{
+        position: absolute;
+        top: 0;
+        left: 0;
+        right: 0;
+        bottom: 0;
+        flex-direction: column;
+        align-items: center;
+        justify-content: center;
+        gap: 65px;
+        font-size: 2.5rem;
+        background-color: #000;
+        transform: translateX(100%);
+        opacity: 0;
+        z-index: 1;
+        transition: all 1s;
+    }
+
+    .menu-burguer-container.active ~ .link-container{
+        opacity: 1;
+        transform: translateX(0%);
+    }
+}
